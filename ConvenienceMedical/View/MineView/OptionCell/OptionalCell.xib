@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="OptionalCell">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hXU-mG-4Ff">
+                        <rect key="frame" x="28" y="12" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="LN1-e1-kI9"/>
+                            <constraint firstAttribute="height" constant="25" id="mak-ua-7uY"/>
+                            <constraint firstAttribute="width" constant="25" id="uex-Yg-CFW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LN1-e1-kI9"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfT-ff-fTL">
+                        <rect key="frame" x="74" y="14" width="141" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Zsq-Lz-Dmm"/>
+                            <constraint firstAttribute="width" constant="141" id="ow0-nQ-v8G"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiantou_zuo.png" translatesAutoresizingMaskIntoConstraints="NO" id="DsG-Dj-XmM">
+                        <rect key="frame" x="293" y="15" width="11" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="11" id="Y9U-mF-Z7f"/>
+                            <constraint firstAttribute="height" constant="20" id="nrb-F0-Tvh"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hXU-mG-4Ff" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="Dms-rH-iP3"/>
+                    <constraint firstAttribute="centerY" secondItem="DsG-Dj-XmM" secondAttribute="centerY" id="KhM-5N-nZm"/>
+                    <constraint firstItem="YfT-ff-fTL" firstAttribute="leading" secondItem="hXU-mG-4Ff" secondAttribute="trailing" constant="21" id="Q1y-ig-g37"/>
+                    <constraint firstItem="hXU-mG-4Ff" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="W61-bU-0FC"/>
+                    <constraint firstItem="hXU-mG-4Ff" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="YkZ-DL-S0W"/>
+                    <constraint firstAttribute="centerY" secondItem="YfT-ff-fTL" secondAttribute="centerY" id="epd-lW-bxb"/>
+                    <constraint firstAttribute="centerY" secondItem="hXU-mG-4Ff" secondAttribute="centerY" id="k1N-W2-vFe"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="DsG-Dj-XmM" secondAttribute="trailing" constant="10" id="lDd-Gy-L8E"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hXU-mG-4Ff" secondAttribute="bottom" constant="5" id="tvG-M1-aSn"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Dms-rH-iP3"/>
+                        <exclude reference="YkZ-DL-S0W"/>
+                        <exclude reference="tvG-M1-aSn"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImageView" destination="hXU-mG-4Ff" id="pBH-a5-gUn"/>
+                <outlet property="optionLabel" destination="YfT-ff-fTL" id="7l7-kO-TZy"/>
+            </connections>
+            <point key="canvasLocation" x="506" y="552"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="jiantou_zuo.png" width="7" height="13"/>
+    </resources>
+</document>

@@ -1,0 +1,43 @@
+//
+//  DZYL_Header.pch
+//  ConvenienceMedical
+//
+//  Created by 张树青 on 16/1/21.
+//  Copyright (c) 2016年 zsq. All rights reserved.
+//
+
+#ifndef ConvenienceMedical_DZYL_Header_pch
+#define ConvenienceMedical_DZYL_Header_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//屏幕宽高
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+//主题色
+#define BASE_COLOR [UIColor colorWithRed:0 green:169/255.0 blue:155/255.0 alpha:1]
+
+//工具头文件
+#import "ZSQFactory.h"
+#import "ZSQStorage.h"
+#import "ZSQAlertView.h"
+#import "ISNull.h"
+#import "NSString+category.h"
+
+//第三方头文件
+#import "MJRefresh.h"
+#import "JSONModel.h"
+#import "AFNetworking.h"
+#import "Reachability.h"
+
+
+//Model类头文件
+#import "HospitalModel.h"
+
+//网络请求头文件
+#import "BaseHttpClient.h"
+#import "RequestURL.h"
+
+#endif

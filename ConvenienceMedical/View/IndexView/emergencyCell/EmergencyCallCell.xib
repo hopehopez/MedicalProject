@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="71" id="KGk-i7-Jjw" customClass="EmergencyCallCell">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VSz-cN-IA0">
+                        <rect key="frame" x="-92" y="0.0" width="522" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="P8F-U3-K6F"/>
+                            <constraint firstAttribute="height" constant="1" id="UbJ-uO-OUt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="P8F-U3-K6F"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xian-c.png" translatesAutoresizingMaskIntoConstraints="NO" id="7kx-Tu-cFX">
+                        <rect key="frame" x="-92" y="69" width="522" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="1rO-uE-zxa"/>
+                            <constraint firstAttribute="height" constant="1" id="tgH-qK-yIz"/>
+                            <constraint firstAttribute="width" constant="522" id="zBH-qY-HBI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="tgH-qK-yIz"/>
+                                <exclude reference="zBH-qY-HBI"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUz-6R-EI6">
+                        <rect key="frame" x="8" y="25" width="150" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="UiW-ON-aKc"/>
+                            <constraint firstAttribute="height" constant="21" id="zTj-SZ-ja1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xd1-IN-9cv">
+                        <rect key="frame" x="287" y="24" width="23" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="23" id="Hl9-aC-pVj"/>
+                            <constraint firstAttribute="height" constant="23" id="enz-e5-tYH"/>
+                        </constraints>
+                        <state key="normal" title="Button" backgroundImage="bodaanniu_a@3x.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted" image="bodaanniu-b@3x.png"/>
+                        <connections>
+                            <action selector="callClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vg2-Do-DUK"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGU-Gg-PSt">
+                        <rect key="frame" x="157" y="25" width="120" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="NDp-Tz-07v"/>
+                            <constraint firstAttribute="width" constant="100" id="RqX-Re-hSs"/>
+                            <constraint firstAttribute="width" constant="120" id="ZBg-LP-pM9"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="iAt-QE-rFq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RqX-Re-hSs"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VSz-cN-IA0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="0AG-ed-qEp"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Xd1-IN-9cv" secondAttribute="bottom" constant="10" id="6Gi-9w-J83"/>
+                    <constraint firstAttribute="centerY" secondItem="xGU-Gg-PSt" secondAttribute="centerY" id="Gpb-48-tTr"/>
+                    <constraint firstAttribute="centerY" secondItem="WUz-6R-EI6" secondAttribute="centerY" id="IIH-kb-ggd"/>
+                    <constraint firstItem="7kx-Tu-cFX" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="100" id="KR7-uw-pF1"/>
+                    <constraint firstItem="WUz-6R-EI6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Q4J-Nf-MfU"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="7kx-Tu-cFX" secondAttribute="bottom" constant="-8" id="VQZ-wg-BqN"/>
+                    <constraint firstAttribute="centerY" secondItem="Xd1-IN-9cv" secondAttribute="centerY" id="Vkt-2q-0Ak"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="VSz-cN-IA0" secondAttribute="trailing" constant="-100" id="e6e-iI-8PL"/>
+                    <constraint firstItem="7kx-Tu-cFX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-100" id="efc-jJ-anS"/>
+                    <constraint firstAttribute="centerY" secondItem="xGU-Gg-PSt" secondAttribute="centerY" id="gCM-Kr-7W0"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Xd1-IN-9cv" secondAttribute="trailing" constant="20" id="iVG-0m-6zs"/>
+                    <constraint firstItem="Xd1-IN-9cv" firstAttribute="leading" secondItem="xGU-Gg-PSt" secondAttribute="trailing" constant="10" id="vRI-Jf-qKG"/>
+                    <constraint firstItem="VSz-cN-IA0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-100" id="wEY-eP-bM2"/>
+                    <constraint firstItem="Xd1-IN-9cv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="xIs-mI-CNI"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="VSz-cN-IA0"/>
+                    </mask>
+                    <mask key="constraints">
+                        <exclude reference="Gpb-48-tTr"/>
+                        <exclude reference="6Gi-9w-J83"/>
+                        <exclude reference="xIs-mI-CNI"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="callBtn" destination="Xd1-IN-9cv" id="wij-NX-K0N"/>
+                <outlet property="hospitalNameLabel" destination="WUz-6R-EI6" id="EE0-v0-sq9"/>
+                <outlet property="telLabel" destination="xGU-Gg-PSt" id="BFL-fE-iHw"/>
+            </connections>
+            <point key="canvasLocation" x="488" y="546.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bodaanniu-b@3x.png" width="68" height="68"/>
+        <image name="bodaanniu_a@3x.png" width="68" height="68"/>
+        <image name="xian-c.png" width="375" height="1"/>
+    </resources>
+</document>
