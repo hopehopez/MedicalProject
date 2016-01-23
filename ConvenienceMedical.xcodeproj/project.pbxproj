@@ -232,6 +232,7 @@
 		BCB01AB21C4E45960086E21B /* zhuanzhenshenqing@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB01AAF1C4E45960086E21B /* zhuanzhenshenqing@3x.png */; };
 		BCB01ABC1C4E51EB0086E21B /* ZSQCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB01ABA1C4E51EB0086E21B /* ZSQCollectionViewCell.m */; };
 		BCB01ABD1C4E51EB0086E21B /* ZSQCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB01ABB1C4E51EB0086E21B /* ZSQCollectionViewCell.xib */; };
+		BCEFAE381C539849002CEE70 /* NFCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEFAE371C539849002CEE70 /* NFCViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -546,6 +547,8 @@
 		BCB01AB91C4E51EB0086E21B /* ZSQCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSQCollectionViewCell.h; sourceTree = "<group>"; };
 		BCB01ABA1C4E51EB0086E21B /* ZSQCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSQCollectionViewCell.m; sourceTree = "<group>"; };
 		BCB01ABB1C4E51EB0086E21B /* ZSQCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSQCollectionViewCell.xib; sourceTree = "<group>"; };
+		BCEFAE361C539849002CEE70 /* NFCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCViewController.h; sourceTree = "<group>"; };
+		BCEFAE371C539849002CEE70 /* NFCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFCViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -834,6 +837,7 @@
 				BC36E41B1C3FCB2D00302FFA /* IndexViewController.h */,
 				BC36E41C1C3FCB2D00302FFA /* IndexViewController.m */,
 				BC7E37121C4F80900080220A /* EmergencyCall */,
+				BCEFAE351C53982B002CEE70 /* NewFormerCooperation */,
 			);
 			path = IndexViewController;
 			sourceTree = "<group>";
@@ -1381,6 +1385,15 @@
 			path = ZSQCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		BCEFAE351C53982B002CEE70 /* NewFormerCooperation */ = {
+			isa = PBXGroup;
+			children = (
+				BCEFAE361C539849002CEE70 /* NFCViewController.h */,
+				BCEFAE371C539849002CEE70 /* NFCViewController.m */,
+			);
+			path = NewFormerCooperation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1647,6 +1660,7 @@
 				BCB016671C4DE18D0086E21B /* MJRefreshAutoFooter.m in Sources */,
 				BC42B30C1C47D5D400AE7D07 /* AFURLResponseSerialization.m in Sources */,
 				BC42B2E71C47D5A800AE7D07 /* NSArray+JSONModel.m in Sources */,
+				BCEFAE381C539849002CEE70 /* NFCViewController.m in Sources */,
 				BC42B2EB1C47D5A800AE7D07 /* JSONKeyMapper.m in Sources */,
 				BCB0166E1C4DE18D0086E21B /* MJRefreshAutoStateFooter.m in Sources */,
 				BCB0166D1C4DE18D0086E21B /* MJRefreshAutoNormalFooter.m in Sources */,
