@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6093580F-E82B-4FD9-9F09-99B37F524E2B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ConvenienceMedical</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E882195FAEF5C602B542DDD4917D8065C1174603</key>
+		<string>https://github.com/zhangshuqing/MedicalProject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ConvenienceMedical.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E882195FAEF5C602B542DDD4917D8065C1174603</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/zhangshuqing/MedicalProject.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E882195FAEF5C602B542DDD4917D8065C1174603</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E882195FAEF5C602B542DDD4917D8065C1174603</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MedicalProject</string>
+		</dict>
+	</array>
+</dict>
+</plist>
