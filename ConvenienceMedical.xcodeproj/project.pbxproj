@@ -52,6 +52,7 @@
 		7CD276A81C4867F10038B8CF /* yonghuming.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD276A51C4867F10038B8CF /* yonghuming.png */; };
 		7CD276A91C4867F10038B8CF /* yonghuming@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD276A61C4867F10038B8CF /* yonghuming@2x.png */; };
 		7CD276AA1C4867F10038B8CF /* yonghuming@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD276A71C4867F10038B8CF /* yonghuming@3x.png */; };
+		BC120C331C57779700F461F0 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC120C321C57779700F461F0 /* CustomButton.m */; };
 		BC2A8A011C466FF000CEA135 /* xian-c.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A89FE1C466FF000CEA135 /* xian-c.png */; };
 		BC2A8A021C466FF000CEA135 /* xian-c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A89FF1C466FF000CEA135 /* xian-c@2x.png */; };
 		BC2A8A031C466FF000CEA135 /* xian-c@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A8A001C466FF000CEA135 /* xian-c@3x.png */; };
@@ -367,6 +368,8 @@
 		7CD276A51C4867F10038B8CF /* yonghuming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yonghuming.png; sourceTree = "<group>"; };
 		7CD276A61C4867F10038B8CF /* yonghuming@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yonghuming@2x.png"; sourceTree = "<group>"; };
 		7CD276A71C4867F10038B8CF /* yonghuming@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yonghuming@3x.png"; sourceTree = "<group>"; };
+		BC120C311C57779700F461F0 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		BC120C321C57779700F461F0 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		BC2A89FE1C466FF000CEA135 /* xian-c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "xian-c.png"; path = "../xian-c.png"; sourceTree = "<group>"; };
 		BC2A89FF1C466FF000CEA135 /* xian-c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "xian-c@2x.png"; path = "../xian-c@2x.png"; sourceTree = "<group>"; };
 		BC2A8A001C466FF000CEA135 /* xian-c@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "xian-c@3x.png"; path = "../xian-c@3x.png"; sourceTree = "<group>"; };
@@ -781,6 +784,15 @@
 				7CD2767E1C4855A20038B8CF /* RegisterViewController.xib */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		BC120C301C5776C500F461F0 /* hospitalButton */ = {
+			isa = PBXGroup;
+			children = (
+				BC120C311C57779700F461F0 /* CustomButton.h */,
+				BC120C321C57779700F461F0 /* CustomButton.m */,
+			);
+			path = hospitalButton;
 			sourceTree = "<group>";
 		};
 		BC2A8A041C46769300CEA135 /* lunbo */ = {
@@ -1398,6 +1410,7 @@
 		BC7E37231C4F86F00080220A /* IndexView */ = {
 			isa = PBXGroup;
 			children = (
+				BC120C301C5776C500F461F0 /* hospitalButton */,
 				7C43E61F1C4710BF002BC229 /* middleView */,
 				BC9663341C4900D900259D61 /* lunboView */,
 				BC7554CE1C4A69140015330B /* hospitalCell */,
@@ -1966,6 +1979,7 @@
 				BC42B2EB1C47D5A800AE7D07 /* JSONKeyMapper.m in Sources */,
 				BCB0166E1C4DE18D0086E21B /* MJRefreshAutoStateFooter.m in Sources */,
 				BCB0166D1C4DE18D0086E21B /* MJRefreshAutoNormalFooter.m in Sources */,
+				BC120C331C57779700F461F0 /* CustomButton.m in Sources */,
 				BC42B2C61C47CC3700AE7D07 /* ZSQTextField.m in Sources */,
 				BC7798F71C50FB1600B5F5C5 /* ISNull.m in Sources */,
 				7C7082A21C4FE51200359BD1 /* FarmingModel.m in Sources */,
