@@ -31,10 +31,15 @@
 #import "JSONModel.h"
 #import "AFNetworking.h"
 #import "Reachability.h"
+#import "UIImageView+WebCache.h"
+
+//自定义cell
+#import "NotiCell.h"
 
 
 //Model类头文件
 #import "HospitalModel.h"
+#import "NoticeModel.h"
 
 //网络请求头文件
 #import "BaseHttpClient.h"

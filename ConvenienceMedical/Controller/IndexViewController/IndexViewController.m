@@ -7,6 +7,7 @@
 //
 
 #import "IndexViewController.h"
+#import "HospitalViewController.h"
 #import "ZSQLunBoView.h"
 #import "ZSQButton.h"
 #import "ZSQTableViewCell.h"
@@ -35,6 +36,8 @@
     // Do any additional setup after loading the view from its nib.
     
     self.titleLabel.text = @"首页";
+    
+    [self.tabBarView setTabBarViewHidden:NO];
     
     //创建tableView
     [self createTableView];
@@ -167,7 +170,7 @@
     [moreBtn addSubview:moreLabel];
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 40, 20, 10, 20)];
-    imageView.image = [UIImage imageNamed:@"jiantou_zuo"];
+    imageView.image = [UIImage imageNamed:@"jiantoy"];
     [moreBtn addSubview:imageView];
     
     UIImageView *lineImageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 1)];
@@ -188,6 +191,17 @@
     return headerView;
     
 }
+- (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath{
+    //选中cell  进入医院详情页
+    HospitalModel *model = _dataArray[indexPath.row];
+    
+    HospitalViewController *hospitalView = [[HospitalViewController alloc] init];
+    hospitalView.hospitalModel  = model;
+    
+    [self.navigationController pushViewController:hospitalView animated:YES];
+}
+
+
 
 #pragma mark - 下拉刷新
 - (void)addRefresh{
@@ -211,6 +225,12 @@
         //急救电话
         UIViewController *emergencyView = [ZSQFactory createViewControllerWithName:@"EmergencyCallViewController"];
         [self.navigationController pushViewController:emergencyView animated:YES];
+    }else if (btn.tag == 501){
+        UIViewController *farmingView = [ZSQFactory createViewControllerWithName:@"FarmingViewController"];
+        [self.navigationController pushViewController:farmingView animated:YES];
+    }else if (btn.tag == 502){
+        UIViewController *healthCare = [ZSQFactory createViewControllerWithName:@"HealthCareViewController"];
+        [self.navigationController pushViewController:healthCare animated:YES];
     }
 }
 

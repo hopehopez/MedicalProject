@@ -19,7 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.titleLabel.text = @"首页";
+    self.titleLabel.text = @"急救电话";
+    
+    [self.tabBarView setTabBarViewHidden:YES];
     
     //设置背景色
     self.view.backgroundColor = [UIColor colorWithRed:218/255.0 green:218/255.0 blue:218/255.0 alpha:1];
@@ -30,19 +32,16 @@
     [self loadData];
 }
 
-#pragma mark - 创建返回按钮
-- (void)createBackBtn{
-    
-    //返回按钮
-    UIImage *image = [UIImage imageNamed:@"jiantou_a.png"];
-    UIImage *newImage = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:newImage style:UIBarButtonItemStyleDone target:self action:@selector(backEvent:)];
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.tabBarView setTabBarViewHidden:NO];
+
 }
+
 
 #pragma mark 创建tableView
 - (void)createTableView{
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, -34, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, -25, SCREEN_WIDTH, SCREEN_HEIGHT + 25) style:UITableViewStyleGrouped];
     
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -116,10 +115,7 @@
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForFooterInSection:(NSInteger)section{
     return 0;
 }
-#pragma mark - 返回事件
-- (void)backEvent:(id)sender{
-    [self.navigationController popViewControllerAnimated:YES];
-}
+
 
 
 

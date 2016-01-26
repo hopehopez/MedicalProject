@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="45" id="KGk-i7-Jjw" customClass="NotiCell">
+            <rect key="frame" x="0.0" y="0.0" width="316" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="163-Ok-ZDK">
+                        <rect key="frame" x="212" y="11" width="70" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="iEF-Qt-Wks"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiantoy.png" translatesAutoresizingMaskIntoConstraints="NO" id="W3h-0l-mVv">
+                        <rect key="frame" x="292" y="11" width="11" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="uKP-It-GyR"/>
+                            <constraint firstAttribute="width" constant="11" id="uOf-ks-hfW"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwN-AX-Jpc">
+                        <rect key="frame" x="8" y="11" width="189" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="PFn-6L-09O"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AwN-AX-Jpc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="0TW-Jm-Mny"/>
+                    <constraint firstItem="AwN-AX-Jpc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="2Dv-kw-a0L"/>
+                    <constraint firstItem="163-Ok-ZDK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="99r-H9-FnD"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="163-Ok-ZDK" secondAttribute="bottom" constant="4" id="Edc-3Q-OXq"/>
+                    <constraint firstItem="163-Ok-ZDK" firstAttribute="leading" secondItem="AwN-AX-Jpc" secondAttribute="trailing" constant="15" id="MMm-Vk-dqZ"/>
+                    <constraint firstItem="W3h-0l-mVv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="blj-1n-9yN"/>
+                    <constraint firstItem="W3h-0l-mVv" firstAttribute="leading" secondItem="163-Ok-ZDK" secondAttribute="trailing" constant="10" id="wG7-zI-pFR"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="W3h-0l-mVv" secondAttribute="trailing" constant="5" id="y77-b0-eZp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="163-Ok-ZDK" id="SpE-vZ-oeR"/>
+                <outlet property="titleLabel" destination="AwN-AX-Jpc" id="c1K-b3-LaY"/>
+            </connections>
+            <point key="canvasLocation" x="381" y="317.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="jiantoy.png" width="14" height="23"/>
+    </resources>
+</document>

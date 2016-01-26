@@ -38,12 +38,27 @@
     _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(([self.title length] < 10 ?NSTextAlignmentCenter : NSTextAlignmentCenter), 0, 150, 44)];
     //_titleLabel.backgroundColor = [UIColor orangeColor];
     _titleLabel.center = CGPointMake(SCREEN_WIDTH/2, 22);
-    _titleLabel.font = [UIFont systemFontOfSize:23];
+    _titleLabel.font = [UIFont systemFontOfSize:20];
     _titleLabel.textAlignment = NSTextAlignmentCenter;
     _titleLabel.textColor = [UIColor whiteColor];
     _titleLabel.text=self.title;
     self.navigationItem.titleView = _titleLabel;
     
+}
+
+#pragma mark - 创建返回按钮
+- (void)createBackBtn{
+    
+    //返回按钮
+    UIImage *image = [UIImage imageNamed:@"jiantou_a.png"];
+    UIImage *newImage = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:newImage style:UIBarButtonItemStyleDone target:self action:@selector(backEvent:)];
+}
+
+#pragma mark - 返回事件
+- (void)backEvent:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface NFCViewController : BaseViewController
+@interface FarmingViewController : BaseViewController
 
 @end

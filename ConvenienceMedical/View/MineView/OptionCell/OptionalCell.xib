@@ -72,6 +72,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="jiantou_zuo.png" width="7" height="13"/>
+        <image name="jiantou_zuo.png" width="11" height="19"/>
     </resources>
 </document>

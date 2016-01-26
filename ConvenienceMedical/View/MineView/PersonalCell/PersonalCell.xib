@@ -54,7 +54,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="jiantou_zuo.png" width="7" height="13"/>
+        <image name="jiantou_zuo.png" width="11" height="19"/>
         <image name="头像.png" width="63" height="63"/>
     </resources>
 </document>

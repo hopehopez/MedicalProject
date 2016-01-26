@@ -13,4 +13,8 @@
 @interface BaseViewController : UIViewController
 @property (nonatomic, weak) TabBarViewController *tabBarView;
 @property (nonatomic, strong) UILabel *titleLabel;
+
+
+//创建返回按钮
+- (void)createBackBtn;
 @end

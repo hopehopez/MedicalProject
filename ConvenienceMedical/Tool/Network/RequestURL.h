@@ -23,4 +23,14 @@
 //医院展示
 #define URL_HOSPITAL_SHOW @"http://www.dzwsyl.com/home/hospital_show_list.htm"
 
+//急救电话列表
+#define URL_EMERGENCY_CALLS @"http://www.dzwsyl.com/home/emergency_calls.htm"
+
+//新农合列表
+#define URL_FARMING @"http://www.dzwsyl.com/home/farming_List.htm"
+
+//医保列表
+#define URL_HEALTH_CARE @"http://www.dzwsyl.com/home/health_care_List.htm"
+
+
 #endif
