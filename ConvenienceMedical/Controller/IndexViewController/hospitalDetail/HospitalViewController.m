@@ -29,6 +29,34 @@
     self.callLabel.text = _hospitalModel.lxdh;
     self.emergencyCallLabel.text = @"120";
     [self.hospitalImageView sd_setImageWithURL:[NSURL URLWithString: _hospitalModel.photo ] placeholderImage:nil options:SDWebImageRefreshCached];
+    
+    [self reAdjustBtn:self.hospitalInfo];
+    
+    [self reAdjustBtn:self.hospitalNews];
+    
+    [self reAdjustBtn:self.officeInfo];
+    
+    [self reAdjustBtn:self.healthCheck];
+    
+    [self.view layoutIfNeeded];
+}
+
+- (void)reAdjustBtn:(UIButton *)btn{
+    UIImage *image = btn.imageView.image;
+    UILabel *label = btn.titleLabel;
+    
+    CGRect titleRect = label.bounds;
+    CGSize imageSize  = image.size;
+    
+    btn.imageEdgeInsets = UIEdgeInsetsMake(-(titleRect.size.height )/2,
+                                                         titleRect.size.width / 2,
+                                                         (titleRect.size.height )/2,
+                                                         -titleRect.size.width/2);
+    
+    btn.titleEdgeInsets = UIEdgeInsetsMake((imageSize.height )/2,
+                                                         -(imageSize.width)/2,
+                                                         -(imageSize.height)/2,
+                                                         imageSize.width/2);
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

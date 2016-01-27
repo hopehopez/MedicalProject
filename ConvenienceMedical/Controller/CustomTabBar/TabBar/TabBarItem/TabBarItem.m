@@ -58,6 +58,26 @@
     
 }
 
+//- (CGRect)titleRectForContentRect:(CGRect)contentRect{
+//    CGRect buttonRect = contentRect;
+//    CGRect titleRect = self.titleLabel.frame;
+//    CGRect imageRect = self.imageView.bounds;
+//    return CGRectMake((buttonRect.size.width - titleRect.size.width) /2.0,
+//                      (buttonRect.size.height - titleRect.size.height - imageRect.size.height) / 2 + imageRect.size.height + 5,
+//                      titleRect.size.width,
+//                      titleRect.size.height);
+//}
+//- (CGRect)imageRectForContentRect:(CGRect)contentRect{
+//    CGRect buttonRect = contentRect;
+//    CGRect titleRect = self.titleLabel.bounds;
+//    CGRect imageRect = self.imageView.bounds;
+//    return CGRectMake((buttonRect.size.width - titleRect.size.width) /2.0,
+//                      (buttonRect.size.height - titleRect.size.height - imageRect.size.height) / 2,
+//                      titleRect.size.width,
+//                      titleRect.size.height);
+//}
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
