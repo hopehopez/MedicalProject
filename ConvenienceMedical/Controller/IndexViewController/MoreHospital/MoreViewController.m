@@ -11,11 +11,18 @@
 @interface MoreViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
+
+//标志当前选中的button
 @property (nonatomic, assign) NSInteger selected;
 
+//存储不同header的数组
 @property (nonatomic, strong) NSArray *categoryArray;
 @property (nonatomic, strong) NSArray *levelArray;
 @property (nonatomic, strong) NSArray *distanceArray;
+
+//打开或关闭分组的标志量数组
+@property (nonatomic, strong) NSMutableArray *flagArray;
+
 @end
 
 @implementation MoreViewController
@@ -31,7 +38,8 @@
     // Do any additional setup after loading the view from its nib.
     self.titleLabel.text = @"医院列表";
     [self createBackBtn];
-    _selected = 0;
+    _selected = 1;
+    _flagArray = [NSMutableArray array];
     
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -55,7 +63,7 @@
         [_dataArray removeAllObjects];
     }
     
-    NSDictionary *dict = @{@"type":@(_selected + 1)};
+    NSDictionary *dict = @{@"type":@(_selected)};
     [BaseHttpClient httpType:POST andURL:URL_HOSPITAL_LIST andParameters:dict andSuccessBlock:^(NSURL *url, NSDictionary *data) {
         
         NSArray *array = data[@"data"];
@@ -81,11 +89,23 @@
 
 #pragma mark - dataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
+    if (_flagArray.count == 0) {
+        for (int i = 0; i<_dataArray.count; i++) {
+            [_flagArray addObject:[@(1) stringValue]];
+        }
+    }
+    
     return _dataArray.count;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSArray *array = _dataArray[section];
-    return  array.count;
+    
+    if ([_flagArray[section] isEqualToString:@"0"]) {
+        return 0;
+    }else{
+        NSArray *array = _dataArray[section];
+        return  array.count;
+    }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -118,23 +138,46 @@
     [view addSubview:label];
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 40, 15, 15, 10)];
-    imageView.image = [UIImage imageNamed:@"xiangxiajiantou_a"];
+    if ([_flagArray[section] isEqualToString:@"0"]) {
+        imageView.image = [UIImage imageNamed:@"xiangxiajiantou_a"];
+    }else{
+        imageView.image = [UIImage imageNamed:@"jiantoutop_a"];
+    }
     [view addSubview:imageView];
     
-    if (_selected == 0) {
+    if (_selected == 1) {
         label.text = _categoryArray[section];
+    }else if (_selected == 2){
+        label.text = _levelArray[section];
     }
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)];
+    view.tag = section + 100;
+    //view.userInteractionEnabled = YES;
+    [view addGestureRecognizer:tap];
     return view;
 }
+//tap事件  关闭或者打开
+- (void)tapClick:(UITapGestureRecognizer *)tap{
+    NSInteger index = tap.view.tag - 100;
+    if ([_flagArray[index] isEqualToString:@"1"]) {
+        [_flagArray replaceObjectAtIndex:index withObject:@"0"];
+        
+    }else{
+        [_flagArray replaceObjectAtIndex:index withObject:@"1"];
+    }
+    [_tableView reloadData];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 40;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 40;
 }
-
-
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -150,4 +193,33 @@
 }
 */
 
+- (IBAction)categoryClick:(UIButton *)sender {
+    
+    if (sender.selected) {
+        return;
+    }else{
+        sender.selected = YES;
+        _selected = 1;
+        _levelBtn.selected = NO;
+        _distanceBtn.selected = NO;
+        [self loadData];
+    }
+    
+}
+
+- (IBAction)levelClick:(UIButton *)sender {
+    if (sender.selected) {
+        return;
+    }else{
+        sender.selected = YES;
+        _selected = 2;
+        _categoryBtn.selected = NO;
+        _distanceBtn.selected = NO;
+        [self loadData];
+    }
+
+}
+
+- (IBAction)distaceClick:(UIButton *)sender {
+}
 @end

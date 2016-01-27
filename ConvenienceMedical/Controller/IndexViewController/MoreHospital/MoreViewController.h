@@ -14,4 +14,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *distanceBtn;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+- (IBAction)categoryClick:(UIButton *)sender;
+
+- (IBAction)levelClick:(UIButton *)sender;
+
+- (IBAction)distaceClick:(UIButton *)sender;
+
 @end
