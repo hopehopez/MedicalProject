@@ -23,6 +23,9 @@
 //医院展示
 #define URL_HOSPITAL_SHOW @"http://www.dzwsyl.com/home/hospital_show_list.htm"
 
+//医院列表
+#define URL_HOSPITAL_LIST @"http://www.dzwsyl.com/home/hospital_list.htm"
+
 //急救电话列表
 #define URL_EMERGENCY_CALLS @"http://www.dzwsyl.com/home/emergency_calls.htm"
 

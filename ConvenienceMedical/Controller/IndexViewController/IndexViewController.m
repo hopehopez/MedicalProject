@@ -158,6 +158,7 @@
     CGRect rect = _middleView.frame;
     UIButton *moreBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, rect.origin.y + rect.size.height , SCREEN_WIDTH, 50)];
     moreBtn.backgroundColor = [UIColor whiteColor];
+    [moreBtn addTarget:self action:@selector(moreClick:) forControlEvents:UIControlEventTouchUpInside];
     
     UILabel *hospitalLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 5, 60, 50)];
     hospitalLabel.text = @"医院";
@@ -192,6 +193,7 @@
     return headerView;
     
 }
+
 - (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath{
     //选中cell  进入医院详情页
     HospitalModel *model = _dataArray[indexPath.row];
@@ -202,7 +204,11 @@
     [self.navigationController pushViewController:hospitalView animated:YES];
 }
 
-
+#pragma mark - 更多医院
+- (void)moreClick:(UIButton *)btn{
+    UIViewController *moreView = [ZSQFactory createViewControllerWithName:@"MoreViewController"];
+    [self.navigationController pushViewController:moreView animated:YES];
+}
 
 #pragma mark - 下拉刷新
 - (void)addRefresh{

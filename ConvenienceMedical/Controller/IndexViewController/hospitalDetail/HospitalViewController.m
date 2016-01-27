@@ -48,15 +48,9 @@
     CGRect titleRect = label.bounds;
     CGSize imageSize  = image.size;
     
-    btn.imageEdgeInsets = UIEdgeInsetsMake(-(titleRect.size.height )/2,
-                                                         titleRect.size.width / 2,
-                                                         (titleRect.size.height )/2,
-                                                         -titleRect.size.width/2);
+    btn.imageEdgeInsets = UIEdgeInsetsMake(-titleRect.size.height/2, titleRect.size.width / 2, titleRect.size.height/2, -titleRect.size.width/2);
     
-    btn.titleEdgeInsets = UIEdgeInsetsMake((imageSize.height )/2,
-                                                         -(imageSize.width)/2,
-                                                         -(imageSize.height)/2,
-                                                         imageSize.width/2);
+    btn.titleEdgeInsets = UIEdgeInsetsMake(imageSize.height/2, -imageSize.width/2, -imageSize.height/2, imageSize.width/2);
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
